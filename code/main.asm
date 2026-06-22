@@ -1,0 +1,49 @@
+// 7-Segment LED program 
+.INCLUDE "M32ADEF.INC"
+
+SBI DDRC, PINC0 
+LDI R16, 0xFF OUT DDRB, R16
+
+//set stack pointer 
+LDI R16, HIGH(RAMEND) OUT SPH,R16 LDI R16, LOW(RAMEND) OUT SPL, R16 
+
+//create lookup table
+LDI R31, 0x00 LDI R30, 0x00
+LDI R16, 0xFC STD Z+0x00, R16
+LDI R16, 0x60 STD Z+0x01, R16
+LDI R16, 0xDA STD Z+0x02, R16
+LDI R16, 0xF2 STD Z+0x03, R16
+LDI R16, 0x66 STD Z+0x04, R16
+LDI R16, 0xB6 STD Z+0x05, R16
+LDI R16, 0xBE STD Z+0x06, R16
+LDI R16, 0xE0 STD Z+0x07, R16
+LDI R16, 0xFE STD Z+0x08, R16
+LDI R16, 0xF6 STD Z+0x09, R16
+
+
+
+Load:	LDI R31, 0x00 LDI R30, 0x09
+Main: 	LD R19, Z
+		OUT PORTB, R19
+		SBI PORTC, PINC0 
+		CALL Delay 
+		CBI PORTC, PINC0 
+		CALL Delay 
+		DEC R30
+		BRMI Load
+		JMP Main  	 
+
+ 
+Delay: 	LDI R16,0xFF //Loop 1 
+L1: 	LDI R17,0xFF // Loop 2 
+L2: 	LDI R18,0x07 // Loop 3 
+L3: 	NOP 
+ 	 	DEC R18 
+ 	 	BRNE L3 	//Loop 3 End 
+ 	 	DEC R17 
+ 	 	BRNE L2 	//Loop 2 End 
+ 	 	DEC R16 
+ 	 	BRNE L1 	// Loop 3 End 
+ 	 	RET 
+
+
