@@ -11,7 +11,7 @@ This project implements a 7-segment LED counter using AVR Assembly Language and 
 - Counts down from 9 to 0
 - SimulIDE simulation for ATmega32A
 
-  ## Project Structure
+## Project Structure
 
 ```text
 code/
