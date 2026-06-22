@@ -28,12 +28,49 @@ images/
 
 ![Circuit](images/7_segment_LED_counter.png)
 
+## Building the Project
+
+1. Open the AVR Assembly source file:
+
+   ```text
+   code/main.asm
+   ```
+
+2. Assemble the program using an AVR assembler such as Microchip Studio (recommended).
+
+3. Load the generated HEX file into the ATmega32A microcontroller in SimulIDE before running the simulation.
+
 ## Running the Simulation
 
-1. Open SimulIDE.
-2. Load `simulation/7 segment LED Counter.sim1`.
-3. Run the simulation.
-4. Observe the counter on the 7-segment display.
+### Prerequisites
+
+- SimulIDE installed on your system
+
+### Steps
+
+1. Open the simulation file in SimulIDE:
+
+   ```text
+   simulation/7 segment LED Counter.sim1
+   ```
+   
+2. If the microcontroller does not already contain the program:
+
+   - Double-click the ATmega32A microcontroller in SimulIDE.
+   - Locate the **Load firmware** field.
+   - Load the generated HEX file into the microcontroller.
+
+4. Run the simulation.
+
+5. Observe the 7-segment display counting down from 9 to 0.
+
+### Source Code
+
+The AVR Assembly source code is available in:
+
+```text
+code/main.asm
+```
 
 ## Author
 
