@@ -64,7 +64,7 @@ images/
 
 5. Observe the 7-segment display counting down from 9 to 0.
 
-### Source Code
+## Source Code
 
 The AVR Assembly source code is available in:
 
