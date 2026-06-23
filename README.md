@@ -60,9 +60,9 @@ images/
    - Locate the **Load firmware** field.
    - Load the generated HEX file into the microcontroller.
 
-4. Run the simulation.
+3. Run the simulation.
 
-5. Observe the 7-segment display counting down from 9 to 0.
+4. Observe the 7-segment display counting down from 9 to 0.
 
 ## Source Code
 
