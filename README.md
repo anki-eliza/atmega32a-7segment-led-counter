@@ -4,12 +4,16 @@
 
 This project implements a 7-segment LED counter using AVR Assembly Language and SimulIDE for ATmega32A microcontroller.
 
+---
+
 ## Features
 
 - AVR Assembly implementation for ATmega32A
 - Seven-segment display
 - Counts down from 9 to 0
 - SimulIDE simulation for ATmega32A
+
+---
 
 ## Project Structure
 
@@ -24,9 +28,13 @@ images/
  └── 7_segment_LED_counter.png
 ```
 
+---
+
 ## Circuit Diagram
 
 ![Circuit](images/7_segment_LED_counter.png)
+
+---
 
 ## Building the Project
 
@@ -39,6 +47,8 @@ images/
 2. Assemble the program using an AVR assembler such as Microchip Studio (recommended).
 
 3. Load the generated HEX file into the ATmega32A microcontroller in SimulIDE before running the simulation.
+
+---
 
 ## Running the Simulation
 
@@ -64,6 +74,8 @@ images/
 
 4. Observe the 7-segment display counting down from 9 to 0.
 
+---
+
 ## Source Code
 
 The AVR Assembly source code is available in:
@@ -71,6 +83,8 @@ The AVR Assembly source code is available in:
 ```text
 code/main.asm
 ```
+
+---
 
 ## Author
 
